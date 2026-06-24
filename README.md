@@ -1,27 +1,29 @@
-# Bibliotheque
+# Bibliothèque
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.14.
+[![CI](https://github.com/Naoile/bibliotheque/actions/workflows/ci.yml/badge.svg)](https://github.com/Naoile/bibliotheque/actions/workflows/ci.yml)
 
-## Development server
+Application web personnelle pour suivre mes lectures
+Elle permet d'ajouter un livre, noter s'il a été lu, lui attribuer une note et écrire une fiche de lecture. Les données sont sauvegardées localement dans le navigateur.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# Technologies utilisées
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular 18 : framework frontend
+- Tailwind CSS : style de l'interface
+- localStorage : sauvegarde des données dans le navigateur
+- Docker + Nginx: conteneurisation de l'application
+- GitHub Actions : pipeline CI/CD automatisé
 
-## Build
+# Comment lancer le projet
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1) Sans Docker (développement) : 
+npm install
+ng serve
+Puis ouvre http://localhost:4200 dans ton navigateur.
 
-## Running unit tests
+2) Avec Docker
+docker compose up --build
+Puis ouvre http://localhost:8080 dans ton navigateur.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+# Lancer les tests
+ng test --watch=false
