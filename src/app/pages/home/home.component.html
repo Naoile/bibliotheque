@@ -1,0 +1,27 @@
+<div class="min-h-screen bg-gray-100 p-8">
+  <h1 class="text-3xl font-bold text-center text-indigo-700 mb-2">📚 Ma Bibliothèque</h1>
+  <p class="text-center text-gray-500 mb-8">Gérez vos lectures personnelles</p>
+
+  <!-- Stats rapides -->
+  <div class="max-w-2xl mx-auto grid grid-cols-3 gap-4 mb-8">
+    <div class="bg-white rounded-xl shadow p-4 text-center">
+      <p class="text-2xl font-bold text-indigo-600">{{ totalBooks }}</p>
+      <p class="text-gray-500 text-sm">Total livres</p>
+    </div>
+    <div class="bg-white rounded-xl shadow p-4 text-center">
+      <p class="text-2xl font-bold text-green-600">{{ readBooks }}</p>
+      <p class="text-gray-500 text-sm">Lus</p>
+    </div>
+    <div class="bg-white rounded-xl shadow p-4 text-center">
+      <p class="text-2xl font-bold text-orange-500">{{ toReadBooks }}</p>
+      <p class="text-gray-500 text-sm">À lire</p>
+    </div>
+  </div>
+
+  <!-- Bouton vers la liste -->
+  <div class="text-center">
+    <a routerLink="/books" class="bg-indigo-600 text-white px-6 py-3 rounded-xl hover:bg-indigo-700 transition">
+      Voir ma bibliothèque →
+    </a>
+  </div>
+</div>
